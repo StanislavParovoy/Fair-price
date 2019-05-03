@@ -21,7 +21,9 @@ void createScriptFile(long double u[J + 1][N + 1], long double x[J + 1], long do
 	out.close();
 }
 
-long double err[J + 1][N + 1];//численное решение
+long double err[J + 1][N + 1];
 
 long double val = abs(u[j][n] - U[j][n]);
 err[j][n] = val;
+
+createScriptFile(err, x, t);
