@@ -158,14 +158,14 @@ int main()
 		u[J][n] = func_g1(t[n]);
 	}
 
-	long double alpha[J];
+	long double alpha[J+1];
 	alpha[1] = b[0] / c[0];
 	for (int j = 1; j <= J - 1; j++) {
 		alpha[j + 1] = b[j] / (c[j] - a[j] * alpha[j]);
 	}
 
-	long double betta[J];
-	long double d[J];
+	long double betta[J+1];
+	long double d[J+1];
 	for (int n = 0; n <= N - 1; n++) {
 		d[0] = u[0][n + 1];
 		d[J] = u[J][n + 1];
