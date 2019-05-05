@@ -16,7 +16,7 @@ const long double r = 0.1;
 const long double T = σ * σ / 2;
 const long double σ_tsq = σ * σ * (1 + eps);
 
-void createScriptFile(long double u[2 * N + 1][M + 1], long double x[2 * N + 1], long double t[2 * N + 1]) {//dbg
+void createScriptFile(long double u[2 * N + 1][M + 1], long double x[2 * N + 1], long double t[2 * N + 1]) {
 	std::ofstream out;
 
 	out.open("script.m");
