@@ -13,6 +13,7 @@ const int M = 160;
 
 const long double R = 1.0;
 const long double σ = 0.2;
+const long double r = 0.1;
 const long double T = (σ * σ) / 2;
 
 const long double delta_t = 0.01;
