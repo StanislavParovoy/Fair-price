@@ -20,22 +20,22 @@ const long double σ = 0.39;
 const long double  γ = sqrt(beta*beta + 2.0 * σ*σ);
 
 long double func_U(long double t) {
-	long double result = 2.0 * γ *  exp(((beta + γ)*t) / (2.0));
+	long double result = 2.0 * γ *  expl(((beta + γ)*t) / (2.0));
 	return result;
 }
 
 long double func_V(long double t) {
-	long double result = 2.0 * γ + (beta + γ)*(exp((γ*t)) - 1);
+	long double result = 2.0 * γ + (beta + γ)*(expl((γ*t)) - 1);
 	return result;
 }
 
 long double func_W(long double t) {
-	long double result = 2.0 * (exp((γ*t)) - 1);
+	long double result = 2.0 * (expl((γ*t)) - 1);
 	return result;
 }
 
 long double func_A(long double t) {
-	long double result = pow(func_U(t) / func_V(t), (2.0*_alpha) / (σ* σ));
+	long double result = powl(func_U(t) / func_V(t), (2.0*_alpha) / (σ* σ));
 	return result;
 }
 
@@ -45,7 +45,7 @@ long double func_B(long double t) {
 }
 
 long double func_v(long double x, long double t) {
-	long double result = func_A(t)*exp((-func_B(t)*x));
+	long double result = func_A(t)*expl((-func_B(t)*x));
 	return result;
 }
 
